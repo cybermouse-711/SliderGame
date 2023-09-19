@@ -1,5 +1,5 @@
 //
-//  ButtonViewModifier.swift
+//  ButtonView.swift
 //  SliderGame
 //
 //  Created by Елизавета Медведева on 19.09.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonViewModifier: View {
+struct ButtonView: View {
     let title: String
     let action: () -> Void
     
@@ -21,8 +21,8 @@ struct ButtonViewModifier: View {
     }
 }
 
-struct ButtonViewModifier_Previews: PreviewProvider {
+struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonViewModifier(title: "Button", action: {})
+        ButtonView(title: "Button", action: {})
     }
 }
