@@ -10,10 +10,13 @@ import SwiftUI
 struct SliderUIK: UIViewRepresentable {
     @Binding var currentValue: Double
     
+    let maximumValue: Float
+    let minimumValue: Float
+    
     func makeUIView(context: Context) -> UISlider {
         let slider = UISlider()
-        slider.maximumValue = 100
-        slider.minimumValue = 0
+        slider.maximumValue = maximumValue
+        slider.minimumValue = minimumValue
         slider.thumbTintColor = .red
         
         return slider
@@ -40,6 +43,6 @@ extension SliderUIK {
 
 struct SliderUIK_Previews: PreviewProvider {
     static var previews: some View {
-        SliderUIK(currentValue: .constant(50))
+        SliderUIK(currentValue: .constant(50), maximumValue: 100, minimumValue: 0)
     }
 }

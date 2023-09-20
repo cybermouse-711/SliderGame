@@ -8,14 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
-    let targetValue = 0 //целевое
-    let currentValue = 0.0 //от слайдера
+    @State var targetValue = 0 //целевое
+    @State var currentValue = 5.0 //от слайдера
+    
+    let minimumValueText: Float = 0
+    let maximumValueText: Float = 100
     
     var body: some View {
         VStack {
             Text("Подвиньте слайдер как можно ближе к: \(targetValue)")
+                .padding(.bottom)
+            HStack {
+                Text(String(format: "%.0f", minimumValueText))
+                
+                SliderUIK(
+                    currentValue: $currentValue,
+                    maximumValue: minimumValueText,
+                    minimumValue: minimumValueText
+                )
+                
+                Text(String(format: "%.0f", maximumValueText))
+            }
+            .padding(.bottom)
             
             ButtonView(title: "Проверить ответ", action: {})
+                .padding(.bottom)
 
             ButtonView(title: "Начать заново", action: {})
         }
