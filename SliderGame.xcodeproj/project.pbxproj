@@ -12,6 +12,7 @@
 		C6E74B4E2ABA3A1600DF8A16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E74B4D2ABA3A1600DF8A16 /* Assets.xcassets */; };
 		C6E74B512ABA3A1600DF8A16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E74B502ABA3A1600DF8A16 /* Preview Assets.xcassets */; };
 		C6E74B582ABA3CE400DF8A16 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E74B572ABA3CE400DF8A16 /* ButtonView.swift */; };
+		C6E74B5A2ABB71C300DF8A16 /* SliderUIK.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E74B592ABB71C200DF8A16 /* SliderUIK.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		C6E74B4D2ABA3A1600DF8A16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6E74B502ABA3A1600DF8A16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C6E74B572ABA3CE400DF8A16 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		C6E74B592ABB71C200DF8A16 /* SliderUIK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderUIK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				C6E74B492ABA3A1400DF8A16 /* SliderGameApp.swift */,
 				C6E74B4B2ABA3A1400DF8A16 /* ContentView.swift */,
+				C6E74B592ABB71C200DF8A16 /* SliderUIK.swift */,
 				C6E74B572ABA3CE400DF8A16 /* ButtonView.swift */,
 				C6E74B4D2ABA3A1600DF8A16 /* Assets.xcassets */,
 				C6E74B4F2ABA3A1600DF8A16 /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				C6E74B4C2ABA3A1400DF8A16 /* ContentView.swift in Sources */,
 				C6E74B582ABA3CE400DF8A16 /* ButtonView.swift in Sources */,
+				C6E74B5A2ABB71C300DF8A16 /* SliderUIK.swift in Sources */,
 				C6E74B4A2ABA3A1400DF8A16 /* SliderGameApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
