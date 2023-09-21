@@ -11,18 +11,19 @@ final class StorageManager: ObservableObject {
     
     static let shared = StorageManager()
     
-    var targetValue = Int.random(in: 0...100)
-    @Published var currentValue: Double = 50
+    @Published var value = Value()
+    var currentValue: Double = 50
     
     private init() {}
     
     func computeScore() -> Int {
-        let difference = abs(targetValue - lround(currentValue))
+        let difference = abs(value.targetValue - lround(currentValue))
         return 100 - difference
     }
     
     func changeValue() -> Int {
-        targetValue = Int.random(in: 0...100)
-        return targetValue
+        var newValue = value.targetValue
+        newValue = Int.random(in: 0...100)
+        return newValue
     }
 }

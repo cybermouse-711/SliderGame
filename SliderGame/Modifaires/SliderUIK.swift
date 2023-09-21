@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SliderUIK: UIViewRepresentable {
-    @Binding var currentValue: Double
+    @Binding var currentValue: Double //убрать зависимость
     
     let maximumValue: Float
     let minimumValue: Float

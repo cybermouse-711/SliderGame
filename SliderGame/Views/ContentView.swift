@@ -9,16 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @StateObject private var manager = ValueManager()
     private let storageManager = StorageManager.shared
     
-    @State private var targetValue = storageManager.targetValue
-    @State private var currentValue = storageManager.$currentValue
-    
+    @State private var currentValue = 0.0
     @State private var showAlert = false
     
     var body: some View {
         VStack {
-            Text("Подвиньте слайдер как можно ближе к: \(targetValue)")
+            Text("Подвиньте слайдер как можно ближе к: \(manager.value.targetValue)")
 
             SliderView(currentValue: $currentValue, minimumValueText: 0, maximumValueText: 100)
                 .padding()

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SliderView: View {
-    @Binding var currentValue: Double
+    @Binding var currentValue: Double //убрать зависимость
     
     let minimumValueText: Float
     let maximumValueText: Float
