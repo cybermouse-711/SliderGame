@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var targetValue = 0 //целевое
-    @State var currentValue = 5.0 //от слайдера
+    
+    private let storageManager = StorageManager.shared
+    
+    @State private var targetValue = storageManager.targetValue
+    @State private var currentValue = storageManager.$currentValue
     
     var body: some View {
         VStack {
@@ -25,10 +28,6 @@ struct ContentView: View {
         }
     }
     
-    private func computeScore() -> Int {
-        let difference = abs(targetValue - lround(currentValue))
-        return 100 - difference
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {

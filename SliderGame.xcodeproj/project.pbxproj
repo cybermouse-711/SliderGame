@@ -14,6 +14,7 @@
 		C6E74B582ABA3CE400DF8A16 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E74B572ABA3CE400DF8A16 /* ButtonView.swift */; };
 		C6E74B5A2ABB71C300DF8A16 /* SliderUIK.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E74B592ABB71C200DF8A16 /* SliderUIK.swift */; };
 		C6E74B5C2ABB98C400DF8A16 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E74B5B2ABB98C400DF8A16 /* SliderView.swift */; };
+		C6E74B5E2ABCC57600DF8A16 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E74B5D2ABCC57600DF8A16 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		C6E74B572ABA3CE400DF8A16 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		C6E74B592ABB71C200DF8A16 /* SliderUIK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderUIK.swift; sourceTree = "<group>"; };
 		C6E74B5B2ABB98C400DF8A16 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		C6E74B5D2ABCC57600DF8A16 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				C6E74B572ABA3CE400DF8A16 /* ButtonView.swift */,
 				C6E74B5B2ABB98C400DF8A16 /* SliderView.swift */,
 				C6E74B592ABB71C200DF8A16 /* SliderUIK.swift */,
+				C6E74B5D2ABCC57600DF8A16 /* StorageManager.swift */,
 				C6E74B4D2ABA3A1600DF8A16 /* Assets.xcassets */,
 				C6E74B4F2ABA3A1600DF8A16 /* Preview Content */,
 			);
@@ -149,6 +152,7 @@
 				C6E74B4C2ABA3A1400DF8A16 /* ContentView.swift in Sources */,
 				C6E74B582ABA3CE400DF8A16 /* ButtonView.swift in Sources */,
 				C6E74B5A2ABB71C300DF8A16 /* SliderUIK.swift in Sources */,
+				C6E74B5E2ABCC57600DF8A16 /* StorageManager.swift in Sources */,
 				C6E74B4A2ABA3A1400DF8A16 /* SliderGameApp.swift in Sources */,
 				C6E74B5C2ABB98C400DF8A16 /* SliderView.swift in Sources */,
 			);

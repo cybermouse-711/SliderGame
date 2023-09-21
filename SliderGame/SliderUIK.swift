@@ -17,7 +17,7 @@ struct SliderUIK: UIViewRepresentable {
         let slider = UISlider()
         slider.maximumValue = maximumValue
         slider.minimumValue = minimumValue
-        slider.thumbTintColor = .red
+        slider.thumbTintColor = .red //сделать настраиваемую альфу
         
         return slider
     }
