@@ -14,6 +14,8 @@ struct ContentView: View {
     @State private var targetValue = storageManager.targetValue
     @State private var currentValue = storageManager.$currentValue
     
+    @State private var showAlert = false
+    
     var body: some View {
         VStack {
             Text("Подвиньте слайдер как можно ближе к: \(targetValue)")
@@ -21,13 +23,16 @@ struct ContentView: View {
             SliderView(currentValue: $currentValue, minimumValueText: 0, maximumValueText: 100)
                 .padding()
             
-            ButtonView(title: "Проверить ответ", action: {})
+            ButtonView(title: "Проверить ответ", action: {showAlert})
                 .padding(.bottom)
 
             ButtonView(title: "Начать заново", action: {})
         }
     }
     
+    private func showAlert() -> Void {
+        .alert("Значение слайдера: \(currentValue)", isPresented: $showAlert, actions: {})
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
