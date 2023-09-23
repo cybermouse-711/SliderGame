@@ -19,17 +19,18 @@ struct ContentView: View {
         VStack {
             Text("Подвиньте слайдер как можно ближе к: \(manager.value.targetValue)")
 
-            SliderView(currentValue: $currentValue, minimumValueText: 0, maximumValueText: 100)
+            SliderView(currentValue: $currentValue, minimumValueText: 0, maximumValueText: 100, alpha: 1)
                 .padding()
             
-            ButtonView(title: "Проверить ответ", action: {showAlert})
+            ButtonView(title: "Проверить ответ", action: showAlert)
                 .padding(.bottom)
 
             ButtonView(title: "Начать заново", action: storageManager.changeValue)
         }
     }
     
-    private func showAlert() -> Void {
+    private func showAlert() {
+        
         .alert("Значение слайдера: \(currentValue)", isPresented: $showAlert, actions: {})
     }
 }

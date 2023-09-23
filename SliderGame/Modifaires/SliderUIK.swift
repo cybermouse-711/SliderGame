@@ -12,12 +12,13 @@ struct SliderUIK: UIViewRepresentable {
     
     let maximumValue: Float
     let minimumValue: Float
+    let alpha: Double
     
     func makeUIView(context: Context) -> UISlider {
         let slider = UISlider()
         slider.maximumValue = maximumValue
         slider.minimumValue = minimumValue
-        slider.thumbTintColor = .red //сделать настраиваемую альфу
+        slider.thumbTintColor = UIColor(red: 1, green: 0, blue: 0, alpha: CGFloat(alpha))
         
         return slider
     }
@@ -43,6 +44,6 @@ extension SliderUIK {
 
 struct SliderUIK_Previews: PreviewProvider {
     static var previews: some View {
-        SliderUIK(currentValue: .constant(50), maximumValue: 100, minimumValue: 0)
+        SliderUIK(currentValue: .constant(50), maximumValue: 100, minimumValue: 0, alpha: 0.5)
     }
 }

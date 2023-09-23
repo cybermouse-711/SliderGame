@@ -12,6 +12,7 @@ struct SliderView: View {
     
     let minimumValueText: Float
     let maximumValueText: Float
+    let alpha: Double
     
     var body: some View {
         HStack {
@@ -20,7 +21,8 @@ struct SliderView: View {
             SliderUIK(
                 currentValue: $currentValue,
                 maximumValue: minimumValueText,
-                minimumValue: minimumValueText
+                minimumValue: minimumValueText,
+                alpha: alpha
             )
             
             Text(String(format: "%.0f", maximumValueText))
@@ -30,6 +32,6 @@ struct SliderView: View {
 
 struct SliderView_Previews: PreviewProvider {
     static var previews: some View {
-        SliderView(currentValue: .constant(50), minimumValueText: 0, maximumValueText: 100)
+        SliderView(currentValue: .constant(50), minimumValueText: 0, maximumValueText: 100, alpha: 0.5)
     }
 }
