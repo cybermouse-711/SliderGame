@@ -21,9 +21,7 @@ final class StorageManager: ObservableObject {
         return 100 - difference
     }
     
-    func changeValue() -> Int {
-        var newValue = value.targetValue
-        newValue = Int.random(in: 0...100)
-        return newValue
+    func changeValue() {
+        value.targetValue = Int.random(in: 0...100)
     }
 }

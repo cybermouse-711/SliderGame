@@ -25,7 +25,7 @@ struct ContentView: View {
             ButtonView(title: "Проверить ответ", action: {showAlert})
                 .padding(.bottom)
 
-            ButtonView(title: "Начать заново", action: {})
+            ButtonView(title: "Начать заново", action: storageManager.changeValue)
         }
     }
     
