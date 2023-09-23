@@ -12,7 +12,7 @@ struct ContentView: View {
     @StateObject private var manager = ValueManager()
     private let storageManager = StorageManager.shared
     
-    @State private var currentValue = 0.0
+    @State private var currentValue = 0.0 //поправить значение
     @State private var showAlert = false
     
     var body: some View {
@@ -22,16 +22,12 @@ struct ContentView: View {
             SliderView(currentValue: $currentValue, minimumValueText: 0, maximumValueText: 100, alpha: 1)
                 .padding()
             
-            ButtonView(title: "Проверить ответ", action: showAlert)
+            ButtonView(title: "Проверить ответ", action: showAlert.toggle())
                 .padding(.bottom)
+                .alert("Значение слайдера: \(storageManager.computeScore())", isPresented: $showAlert, actions: {})
 
             ButtonView(title: "Начать заново", action: storageManager.changeValue)
         }
-    }
-    
-    private func showAlert() {
-        
-        .alert("Значение слайдера: \(currentValue)", isPresented: $showAlert, actions: {})
     }
 }
 

@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct SliderUIK: UIViewRepresentable {
-    @Binding var currentValue: Double //убрать зависимость
+    @Binding var currentValue: Double 
     
     let maximumValue: Float
     let minimumValue: Float
-    let alpha: Double
+    let alpha: Int
     
     func makeUIView(context: Context) -> UISlider {
         let slider = UISlider()
         slider.maximumValue = maximumValue
         slider.minimumValue = minimumValue
-        slider.thumbTintColor = UIColor(red: 1, green: 0, blue: 0, alpha: CGFloat(alpha))
+        slider.thumbTintColor = UIColor(red: 1, green: 0, blue: 0, alpha: CGFloat(alpha / 100))
         
         return slider
     }
