@@ -22,7 +22,7 @@ struct SliderView: View {
                 currentValue: $currentValue,
                 maximumValue: minimumValueText,
                 minimumValue: minimumValueText,
-                alpha: alpha
+                alpha: alpha 
             )
             
             Text(String(format: "%.0f", maximumValueText))

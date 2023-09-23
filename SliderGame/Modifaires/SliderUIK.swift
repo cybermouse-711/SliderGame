@@ -44,6 +44,6 @@ extension SliderUIK {
 
 struct SliderUIK_Previews: PreviewProvider {
     static var previews: some View {
-        SliderUIK(currentValue: .constant(50), maximumValue: 100, minimumValue: 0, alpha: 0.5)
+        SliderUIK(currentValue: .constant(50), maximumValue: 100, minimumValue: 0, alpha: 50)
     }
 }
