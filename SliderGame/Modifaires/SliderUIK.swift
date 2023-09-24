@@ -16,7 +16,6 @@ struct SliderUIK: UIViewRepresentable {
     
     func makeUIView(context: Context) -> UISlider {
         let slider = UISlider()
-        slider.value = Float(currentValue)
         slider.maximumValue = maximumValue
         slider.minimumValue = minimumValue
         
@@ -30,6 +29,7 @@ struct SliderUIK: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UISlider, context: Context) {
+        uiView.value = Float(currentValue)
         uiView.thumbTintColor = UIColor(red: 1, green: 0, blue: 0, alpha: (CGFloat(alpha) / 100))
     }
     
