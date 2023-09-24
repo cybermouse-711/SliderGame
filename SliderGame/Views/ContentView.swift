@@ -10,27 +10,36 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject private var manager = ValueManager()
-    private let storageManager = StorageManager.shared
-
+    
+    @State private var currentValue = 50.0
     @State private var showAlert = false
     
     var body: some View {
         VStack {
-            Text("Подвиньте слайдер как можно ближе к \(manager.value.targetValue)")
+            Text("Подвиньте слайдер как можно ближе к: \(manager.value.targetValue)")
             
             SliderView(
-                currentValue: $manager.value.currentValue,
+                currentValue: $currentValue,
                 minimumValueText: 0,
                 maximumValueText: 100,
-                alpha: 100) // storageManager.computeScore())
+                alpha: computeScore())
             .padding()
             
             ButtonView(title: "Проверить ответ", action: alert)
                 .padding(.bottom)
-                .alert("Значение слайдера: \(storageManager.computeScore())", isPresented: $showAlert, actions: {})
+                .alert("Значение слайдера: \(computeScore())", isPresented: $showAlert, actions: {})
 
-            ButtonView(title: "Начать заново", action: storageManager.changeValue)
+            ButtonView(title: "Начать заново", action: change)
         }
+    }
+    
+    private func computeScore() -> Int {
+        let difference = abs(manager.value.targetValue - lround(currentValue))
+        return 100 - difference
+    }
+    
+    private func change() {
+        manager.value.targetValue = Int.random(in: 0...100)
     }
     
     private func alert() {
