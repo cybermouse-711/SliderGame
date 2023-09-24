@@ -20,6 +20,12 @@ struct SliderUIK: UIViewRepresentable {
         slider.minimumValue = minimumValue
         slider.thumbTintColor = UIColor(red: 1, green: 0, blue: 0, alpha: CGFloat(alpha / 100))
         
+        slider.addTarget(
+            context.coordinator,
+            action: #selector(Coordinator.changeCurrenValue),
+            for: .valueChanged
+        )
+        
         return slider
     }
     
@@ -38,6 +44,10 @@ extension SliderUIK {
         
         init(currentValue: Binding<Double>) {
             self._currentValue = currentValue
+        }
+        
+        @objc func changeCurrenValue(_ sender: UISlider) {
+            currentValue = Double(sender.value)
         }
     }
 }

@@ -18,16 +18,24 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Подвиньте слайдер как можно ближе к: \(manager.value.targetValue)")
-
-            SliderView(currentValue: $currentValue, minimumValueText: 0, maximumValueText: 100, alpha: storageManager.computeScore())
-                .padding()
             
-            ButtonView(title: "Проверить ответ", action: {})
+            SliderView(
+                currentValue: $currentValue,
+                minimumValueText: 0,
+                maximumValueText: 100,
+                alpha: 100) // storageManager.computeScore())
+            .padding()
+            
+            ButtonView(title: "Проверить ответ", action: alert)
                 .padding(.bottom)
-              //  .alert("Значение слайдера: \(storageManager.computeScore())", isPresented: $showAlert, actions: {})
+                .alert("Значение слайдера: \(storageManager.computeScore())", isPresented: $showAlert, actions: {})
 
             ButtonView(title: "Начать заново", action: storageManager.changeValue)
         }
+    }
+    
+    private func alert() {
+        showAlert.toggle()
     }
 }
 
