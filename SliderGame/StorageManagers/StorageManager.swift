@@ -12,12 +12,11 @@ final class StorageManager: ObservableObject {
     static let shared = StorageManager()
     
     @Published var value = Value()
-    var currentValue: Double = 50
     
     private init() {}
     
     func computeScore() -> Int {
-        let difference = abs(value.targetValue - lround(currentValue))
+        let difference = abs(value.targetValue - lround(value.currentValue))
         return 100 - difference
     }
     

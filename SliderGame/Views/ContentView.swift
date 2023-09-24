@@ -11,16 +11,15 @@ struct ContentView: View {
     
     @StateObject private var manager = ValueManager()
     private let storageManager = StorageManager.shared
-    
-    @State private var currentValue = 50.0 //поправить значение
+
     @State private var showAlert = false
     
     var body: some View {
         VStack {
-            Text("Подвиньте слайдер как можно ближе к: \(manager.value.targetValue)")
+            Text("Подвиньте слайдер как можно ближе к \(manager.value.targetValue)")
             
             SliderView(
-                currentValue: $currentValue,
+                currentValue: $manager.value.currentValue,
                 minimumValueText: 0,
                 maximumValueText: 100,
                 alpha: 100) // storageManager.computeScore())
